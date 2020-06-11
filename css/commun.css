@@ -7,11 +7,6 @@ html, body{
 	padding: 0;
 }
 
-body{
-	display: table;
-	width: 100%;
-}
-
 body, nav, ul, li{
 	padding: 0;
 	margin: 0;
@@ -93,7 +88,6 @@ nav > ul > li > ul > li{
 /* FOOTER */
 
 footer{
-	display: table-row;
 	width: 100%;
 	height: 240px;
 	border-top: solid 1px black;
