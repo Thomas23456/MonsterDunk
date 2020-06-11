@@ -21,7 +21,7 @@
 	width: 100%;
 	list-style: none;
     display: flex;
-	flex-flow: row nowarp;
+	flex-flow: row nowrap;
 	justify-content: center;
 }
 
@@ -107,22 +107,26 @@
 
 h3{
 	text-align: center;
+	margin: 0;
+	padding-top: 1rem;
 }
 
 .containerGrid{
 	display: flex;
-	flex-flow: row nowarp;
+	flex-flow: row nowrap;
 	justify-content: center;
+	background-color: white;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
 .grid{
 	position: relative;
-	border: solid 2px purple;
+	border: double 0px purple;
 	border-radius: 5px;
-	box-shadow: 2px 2px 2px grey;
 	display: grid;
 	width: 800px;
-	background: rgba(200, 200, 200, 1);
+	background: white;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 5px;
 	grid-auto-rows: minmax(150px, 0px);
@@ -184,8 +188,8 @@ h3{
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 1.3em;
-	color: black;
-	text-shadow: 0 0 0.2em #87F;
+	color: gold;
+	text-shadow: 0 0 0.2em rgb(0, 0, 0);
 	text-align: center;
 	top: 45%;
 }
@@ -220,3 +224,209 @@ h3{
 	font-size: 1.1em;
 	padding: 0.5% 1% 0 0;
 }
+
+#conteneurAutreNews{
+	background: rgb(247, 247, 247) url("../images/fondGrille.png");
+}
+
+/*** Truc class ****************************************************************************************************************************************/
+
+#conteneurAll{
+	width: 100%;
+	height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    padding-bottom: 2rem;
+}
+
+#conteneurTitre{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+#conteneurTitre > span{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4.5rem;
+    color: gold;
+}
+
+#conteneurTitre > .premierTitre{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+}
+
+.plusEquipe{
+    font-size: 1.5rem;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(228, 208, 99);
+    border-radius: 15px  0px;
+    transition: all .5s ease-out;
+    margin-top: 1rem;
+}
+
+.plusEquipe:hover{
+    background-color: gold;
+    transition: all .5s ease-out;
+    border-radius: 25px  0px;
+}
+
+
+#conteneurChoix{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.conteneurChoixSelection{
+    width: 50%;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.conteneurDivisionPoint{
+    width: 16%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.conteneurDivision{
+    width: 60%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.divisionIcone{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-transform: uppercase;
+    color: rgb(186, 194, 204);
+    transition : all .5s ease-in-out;
+}
+
+/** Redimension d'image **/
+
+.conteneurDivisionPoint img{
+    height: 5rem;
+}
+
+/*******/
+
+.logoEquipe{
+    filter: grayscale(1);
+    width: 100%;
+    transition : all .5s ease-in-out;
+}
+
+.logoTitre{
+    margin-top: .5rem;
+}
+
+.trait{
+    opacity: 0;
+    padding-top: 1rem;
+    border: 1px solid black;
+}
+
+.conteneurDivisionPoint:hover > .trait{
+    opacity: 0;
+}
+
+.conteneurDivisionPoint:hover .logoEquipe{
+    transform: translateY(-8px);
+    filter: grayscale(0);
+    transition : all .5s ease-in-out;
+}
+
+.conteneurDivisionPoint:hover .divisionIcone{
+    color: gold;
+    transition : all .5s ease-in-out;
+}
+
+.conteneurDivisionPoint:hover .point{
+    background-color: gold;
+}
+
+.pointIcone{
+    display: block;
+    position: relative;
+    padding : .5rem;
+    border-radius: 50%;
+}
+
+.point{
+    display: block;
+    position: relative;
+    width: 9px;
+    height: 9px;
+    background-color: rgb(186, 194, 204);
+    border-radius: 50%;
+    transition : all .5s ease-in-out
+}
+
+.videoDivision{
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 180px;
+}
+
+.videoDivision>video{
+    width: 100%;
+}
+
+.dataLecture{
+    resize: inherit;
+}
+
+.conteneurChoixImage{
+    position: relative;
+    width: 35%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cercleInfini{
+    position: absolute;
+    width: 100%;
+    padding-top:100%;
+    border: 3px solid;
+    border-radius: 50%;
+    border-color: gold transparent gold;
+    animation : tourne 4s linear infinite;
+}
+
+@keyframes tourne{
+    100%{
+        transform:rotate(360deg)
+    }
+}
+
+.imageJoueur{
+    width: 100%;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/************************************************************************************************************************/
