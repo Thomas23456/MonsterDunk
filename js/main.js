@@ -52,6 +52,32 @@ $('.conteneurCeltics').click(function(){
     });
   });
 
+$('.conteneurBucks').click(function(){
+    $( ".imageJoueur" ).animate({
+        opacity: 0,
+    }, 500, function() {
+        $('.imageJoueur').attr('src','images/carreBucks.png');
+    });
+    $( ".imageJoueur" ).animate({
+        opacity: 1,
+    }, 500, function() {
+        $('.imageJoueur').attr('src','images/carreBucks.png');
+    });
+});
+
+$('.conteneurBulls').click(function(){
+    $( ".imageJoueur" ).animate({
+        opacity: 0,
+    }, 500, function() {
+        $('.imageJoueur').attr('src','images/carreBulls.png');
+    });
+    $( ".imageJoueur" ).animate({
+        opacity: 1,
+    }, 500, function() {
+        $('.imageJoueur').attr('src','images/carreBulls.png');
+    });
+});
+
 $('.conteneurLakers').click(function(){
     $('.sourceVideo').attr('src','video/highlightLakers.mp4');
     $(".videoGo")[0].load();
@@ -65,4 +91,13 @@ $('.conteneurCeltics').click(function(){
     $(".videoGo")[0].load();
 });
 
+$('.conteneurBucks').click(function(){
+    $('.sourceVideo').attr('src','video/highlightsBucks.mp4');
+    $(".videoGo")[0].load();
+});
+
+$('.conteneurBulls').click(function(){
+    $('.sourceVideo').attr('src','video/highlightBulls.mp4');
+    $(".videoGo")[0].load();
+});
 
