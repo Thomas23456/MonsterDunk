@@ -24,7 +24,7 @@ INSERT INTO `Division` (`id_division`, `nom`) VALUES
 (2, 'Northwest'),
 (3, 'Southwest'),
 (4, 'Atlantic'),
-(5, 'Southest'),
+(5, 'Southeast'),
 (6, 'Central');
 
 -- -----------------------------------------------------
