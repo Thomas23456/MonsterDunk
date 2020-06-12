@@ -18,26 +18,33 @@ $titre1 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Atlantic<b
 echo($titre1);
 
 //requête à exécuter
-$RQTEquipes1 = "SELECT * FROM equipe WHERE region = 'Atlantic' ORDER BY nom";
+$RQTEquipes1 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+				FROM equipe AS eq
+				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
+				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
+				INNER JOIN competition AS comp ON resul.Competition_id_competition = comp.id_competition
+				WHERE divi.nom = 'Atlantic' ORDER BY eq.nom";
 
 $RQTExecEquipes1 = $cnx->prepare($RQTEquipes1);
 $RQTExecEquipes1->execute();
 
 $affichEquipes1 = ''; //la variable à remplir
+$cpt = 0;
 
 while($ligne1 = $RQTExecEquipes1->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
-	$affichEquipes1 = $affichEquipes1.'<div class="containerEquipe">
+	$cpt++;
+	$affichEquipes1 = $affichEquipes1.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne1['image'].'" alt="Logo équipe celtics"/>
 										</div>
 										<div class="containerInfosEquipe">
-											<br/><h3>'.$ligne1['nom'].'</h3><br/><br/><br/>
-											<div class="infosEquipe"><div class="positionEquipe">'.$ligne1['position'].' - '.$ligne1['region'].'</div><div>Surnom :<div>&nbsp;'.$ligne1['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne1['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne1['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne1['entraineur'].'</div></div></div>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">'.$ligne1['libelle'].'</h3><br/><br/><br/>
+											<div class="infosEquipe"><div class="positionEquipe">'.$ligne1['pays'].' - '.$ligne1['nom'].'</div><div>Surnom :<div>&nbsp;'.$ligne1['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne1['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne1['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne1['entraineur'].'</div></div></div>
 										</div>
 										<div class="bilanEquipe">
-											<br/><h3>BILAN</h3><br/><br/>
-											<div>Nombre de victoires : <div>'.$ligne1['victoires_saison'].'</div></div><br/><br/>
-											<div>Nombre de défaites : <div>'.$ligne1['defaites_saison'].'</div></div><br/><br/>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">SAISON '.$ligne1['date_debut'].' - '.$ligne1['date_fin'].'</h3><br/><br/>
+											<div>Nombre de victoires : <div>'.$ligne1['victoire'].'</div></div><br/><br/>
+											<div>Nombre de défaites : <div>'.$ligne1['defaite'].'</div></div><br/><br/>
 										</div>
 									</div><br/>'; 
 }
@@ -49,7 +56,12 @@ $titre2 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Central<br
 echo($titre2);
 
 //requête à exécuter
-$RQTEquipes2 = "SELECT * FROM equipe WHERE region = 'Central' ORDER BY nom";
+$RQTEquipes2 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+				FROM equipe AS eq
+				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
+				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
+				INNER JOIN competition AS comp ON resul.Competition_id_competition = comp.id_competition
+				WHERE divi.nom = 'Central' ORDER BY eq.nom";
 
 $RQTExecEquipes2 = $cnx->prepare($RQTEquipes2);
 $RQTExecEquipes2->execute();
@@ -57,18 +69,19 @@ $RQTExecEquipes2->execute();
 $affichEquipes2 = ''; //la variable à remplir
 
 while($ligne2 = $RQTExecEquipes2->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
-	$affichEquipes2 = $affichEquipes2.'<div class="containerEquipe">
+	$cpt++;
+	$affichEquipes2 = $affichEquipes2.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne2['image'].'" alt="Logo équipe celtics"/>
 										</div>
 										<div class="containerInfosEquipe">
-											<br/><h3>'.$ligne2['nom'].'</h3><br/><br/><br/>
-											<div class="infosEquipe"><div class="positionEquipe">'.$ligne2['position'].' - '.$ligne2['region'].'</div><div>Surnom :<div>&nbsp;'.$ligne2['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne2['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne2['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne2['entraineur'].'</div></div></div>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">'.$ligne2['libelle'].'</h3><br/><br/><br/>
+											<div class="infosEquipe"><div class="positionEquipe">'.$ligne2['pays'].' - '.$ligne2['nom'].'</div><div>Surnom :<div>&nbsp;'.$ligne2['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne2['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne2['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne2['entraineur'].'</div></div></div>
 										</div>
 										<div class="bilanEquipe">
-											<br/><h3>BILAN</h3><br/><br/>
-											<div>Nombre de victoires : <div>'.$ligne2['victoires_saison'].'</div></div><br/><br/>
-											<div>Nombre de défaites : <div>'.$ligne2['defaites_saison'].'</div></div><br/><br/>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">SAISON '.$ligne2['date_debut'].' - '.$ligne2['date_fin'].'</h3><br/><br/>
+											<div>Nombre de victoires : <div>'.$ligne2['victoire'].'</div></div><br/><br/>
+											<div>Nombre de défaites : <div>'.$ligne2['defaite'].'</div></div><br/><br/>
 										</div>
 									</div><br/>'; 
 }
@@ -80,7 +93,12 @@ $titre3 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Southeast<
 echo($titre3);
 
 //requête à exécuter
-$RQTEquipes3 = "SELECT * FROM equipe WHERE region = 'Southeast' ORDER BY nom";
+$RQTEquipes3 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+				FROM equipe AS eq
+				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
+				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
+				INNER JOIN competition AS comp ON resul.Competition_id_competition = comp.id_competition
+				WHERE divi.nom = 'Southeast' ORDER BY eq.nom";
 
 $RQTExecEquipes3 = $cnx->prepare($RQTEquipes3);
 $RQTExecEquipes3->execute();
@@ -88,18 +106,19 @@ $RQTExecEquipes3->execute();
 $affichEquipes3 = ''; //la variable à remplir
 
 while($ligne3 = $RQTExecEquipes3->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
-	$affichEquipes3 = $affichEquipes3.'<div class="containerEquipe">
+	$cpt++;
+	$affichEquipes3 = $affichEquipes3.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne3['image'].'" alt="Logo équipe celtics"/>
 										</div>
 										<div class="containerInfosEquipe">
-											<br/><h3>'.$ligne3['nom'].'</h3><br/><br/><br/>
-											<div class="infosEquipe"><div class="positionEquipe">'.$ligne3['position'].' - '.$ligne3['region'].'</div><div>Surnom :<div>&nbsp;'.$ligne3['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne3['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne3['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne3['entraineur'].'</div></div></div>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">'.$ligne3['libelle'].'</h3><br/><br/><br/>
+											<div class="infosEquipe"><div class="positionEquipe">'.$ligne3['pays'].' - '.$ligne3['nom'].'</div><div>Surnom :<div>&nbsp;'.$ligne3['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne3['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne3['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne3['entraineur'].'</div></div></div>
 										</div>
 										<div class="bilanEquipe">
-											<br/><h3>BILAN</h3><br/><br/>
-											<div>Nombre de victoires : <div>'.$ligne3['victoires_saison'].'</div></div><br/><br/>
-											<div>Nombre de défaites : <div>'.$ligne3['defaites_saison'].'</div></div><br/><br/>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">SAISON '.$ligne3['date_debut'].' - '.$ligne3['date_fin'].'</h3><br/><br/>
+											<div>Nombre de victoires : <div>'.$ligne3['victoire'].'</div></div><br/><br/>
+											<div>Nombre de défaites : <div>'.$ligne3['defaite'].'</div></div><br/><br/>
 										</div>
 									</div><br/>'; 
 }
@@ -111,7 +130,12 @@ $titre4 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Pacific<br
 echo($titre4);
 
 //requête à exécuter
-$RQTEquipes4 = "SELECT * FROM equipe WHERE region = 'Pacific' ORDER BY nom";
+$RQTEquipes4 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+				FROM equipe AS eq
+				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
+				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
+				INNER JOIN competition AS comp ON resul.Competition_id_competition = comp.id_competition
+				WHERE divi.nom = 'Pacific' ORDER BY eq.nom";
 
 $RQTExecEquipes4 = $cnx->prepare($RQTEquipes4);
 $RQTExecEquipes4->execute();
@@ -119,18 +143,19 @@ $RQTExecEquipes4->execute();
 $affichEquipes4 = ''; //la variable à remplir
 
 while($ligne4 = $RQTExecEquipes4->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
-	$affichEquipes4 = $affichEquipes4.'<div class="containerEquipe">
+	$cpt++;
+	$affichEquipes4 = $affichEquipes4.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne4['image'].'" alt="Logo équipe celtics"/>
 										</div>
 										<div class="containerInfosEquipe">
-											<br/><h3>'.$ligne4['nom'].'</h3><br/><br/><br/>
-											<div class="infosEquipe"><div class="positionEquipe">'.$ligne4['position'].' - '.$ligne4['region'].'</div><div>Surnom :<div>&nbsp;'.$ligne4['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne4['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne4['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne4['entraineur'].'</div></div></div>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">'.$ligne4['libelle'].'</h3><br/><br/><br/>
+											<div class="infosEquipe"><div class="positionEquipe">'.$ligne4['pays'].' - '.$ligne4['nom'].'</div><div>Surnom :<div>&nbsp;'.$ligne4['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne4['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne4['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne4['entraineur'].'</div></div></div>
 										</div>
 										<div class="bilanEquipe">
-											<br/><h3>BILAN</h3><br/><br/>
-											<div>Nombre de victoires : <div>'.$ligne4['victoires_saison'].'</div></div><br/><br/>
-											<div>Nombre de défaites : <div>'.$ligne4['defaites_saison'].'</div></div><br/><br/>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">SAISON '.$ligne4['date_debut'].' - '.$ligne4['date_fin'].'</h3><br/><br/>
+											<div>Nombre de victoires : <div>'.$ligne4['victoire'].'</div></div><br/><br/>
+											<div>Nombre de défaites : <div>'.$ligne4['defaite'].'</div></div><br/><br/>
 										</div>
 									</div><br/>'; 
 }
@@ -142,7 +167,12 @@ $titre5 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Southwest<
 echo($titre5);
 
 //requête à exécuter
-$RQTEquipes5 = "SELECT * FROM equipe WHERE region = 'Southwest' ORDER BY nom";
+$RQTEquipes5 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+				FROM equipe AS eq
+				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
+				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
+				INNER JOIN competition AS comp ON resul.Competition_id_competition = comp.id_competition
+				WHERE divi.nom = 'Southwest' ORDER BY eq.nom";
 
 $RQTExecEquipes5 = $cnx->prepare($RQTEquipes5);
 $RQTExecEquipes5->execute();
@@ -150,18 +180,19 @@ $RQTExecEquipes5->execute();
 $affichEquipes5 = ''; //la variable à remplir
 
 while($ligne5 = $RQTExecEquipes5->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
-	$affichEquipes5 = $affichEquipes5.'<div class="containerEquipe">
+	$cpt++;
+	$affichEquipes5 = $affichEquipes5.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne5['image'].'" alt="Logo équipe celtics"/>
 										</div>
 										<div class="containerInfosEquipe">
-											<br/><h3>'.$ligne5['nom'].'</h3><br/><br/><br/>
-											<div class="infosEquipe"><div class="positionEquipe">'.$ligne5['position'].' - '.$ligne5['region'].'</div><div>Surnom :<div>&nbsp;'.$ligne5['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne5['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne5['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne5['entraineur'].'</div></div></div>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">'.$ligne5['libelle'].'</h3><br/><br/><br/>
+											<div class="infosEquipe"><div class="positionEquipe">'.$ligne5['pays'].' - '.$ligne5['nom'].'</div><div>Surnom :<div>&nbsp;'.$ligne5['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne5['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne5['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne5['entraineur'].'</div></div></div>
 										</div>
 										<div class="bilanEquipe">
-											<br/><h3>BILAN</h3><br/><br/>
-											<div>Nombre de victoires : <div>'.$ligne5['victoires_saison'].'</div></div><br/><br/>
-											<div>Nombre de défaites : <div>'.$ligne5['defaites_saison'].'</div></div><br/><br/>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">SAISON '.$ligne5['date_debut'].' - '.$ligne5['date_fin'].'</h3><br/><br/>
+											<div>Nombre de victoires : <div>'.$ligne5['victoire'].'</div></div><br/><br/>
+											<div>Nombre de défaites : <div>'.$ligne5['defaite'].'</div></div><br/><br/>
 										</div>
 									</div><br/>'; 
 }
@@ -173,7 +204,12 @@ $titre6 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Northwest<
 echo($titre6);
 
 //requête à exécuter
-$RQTEquipes6 = "SELECT * FROM equipe WHERE region = 'Northwest' ORDER BY nom";
+$RQTEquipes6 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+				FROM equipe AS eq
+				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
+				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
+				INNER JOIN competition AS comp ON resul.Competition_id_competition = comp.id_competition
+				WHERE divi.nom = 'Northwest' ORDER BY eq.nom";
 
 $RQTExecEquipes6 = $cnx->prepare($RQTEquipes6);
 $RQTExecEquipes6->execute();
@@ -181,18 +217,19 @@ $RQTExecEquipes6->execute();
 $affichEquipes6 = ''; //la variable à remplir
 
 while($ligne6 = $RQTExecEquipes6->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
-	$affichEquipes6 = $affichEquipes6.'<div class="containerEquipe">
+	$cpt++;
+	$affichEquipes6 = $affichEquipes6.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne6['image'].'" alt="Logo équipe celtics"/>
 										</div>
 										<div class="containerInfosEquipe">
-											<br/><h3>'.$ligne6['nom'].'</h3><br/><br/><br/>
-											<div class="infosEquipe"><div class="positionEquipe">'.$ligne6['position'].' - '.$ligne6['region'].'</div><div>Surnom :<div>&nbsp;'.$ligne6['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne6['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne6['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne6['entraineur'].'</div></div></div>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">'.$ligne6['libelle'].'</h3><br/><br/><br/>
+											<div class="infosEquipe"><div class="positionEquipe">'.$ligne6['pays'].' - '.$ligne6['nom'].'</div><div>Surnom :<div>&nbsp;'.$ligne6['surnom'].'</div></div><div>Fondation :<div>&nbsp;'.$ligne6['fondation'].'</div></div><div>Manager :<div>&nbsp;'.$ligne6['manager'].'</div></div><div>Entraîneur :<div>&nbsp;'.$ligne6['entraineur'].'</div></div></div>
 										</div>
 										<div class="bilanEquipe">
-											<br/><h3>BILAN</h3><br/><br/>
-											<div>Nombre de victoires : <div>'.$ligne6['victoires_saison'].'</div></div><br/><br/>
-											<div>Nombre de défaites : <div>'.$ligne6['defaites_saison'].'</div></div><br/><br/>
+											<br/><h3 class="colorTitreEquipe'.$cpt.'">SAISON '.$ligne6['date_debut'].' - '.$ligne6['date_fin'].'</h3><br/><br/>
+											<div>Nombre de victoires : <div>'.$ligne6['victoire'].'</div></div><br/><br/>
+											<div>Nombre de défaites : <div>'.$ligne6['defaite'].'</div></div><br/><br/>
 										</div>
 									</div><br/>'; 
 }

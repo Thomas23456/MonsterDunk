@@ -430,12 +430,25 @@ h3{
 
 /* PAGE EQUIPES */
 
+.containerEquipePrincipal{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	background: black;
+}
+
+.containerEquipePrincipal > div{
+	width: 80%;
+}
+
 .titreEquipe{
 	width: 100%;
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: center;
+	color: white;
 }
 
 .titreEquipe > div{
@@ -445,7 +458,8 @@ h3{
 .ligne{
 	width: 45%;
 	height: 0;
-	border-top: solid 2px black;
+	border-top: solid 2px white;
+	box-shadow: 4px 2px 2px white;
 }
 
 .containerEquipe{
@@ -454,6 +468,7 @@ h3{
 	flex-flow: row nowrap;
 	border-top: solid 2px black;
 	border-bottom: solid 2px black;
+	background: white;
 }
 
 .imageEquipe{
@@ -510,5 +525,350 @@ h3{
 	font-weight: bold;
 	padding: 0 2% 0 0;
 }
+
+/* COULEURS DE CHAQUE EQUIPE */
+
+/* Atlantic */
+
+.colorBorderEquipe1{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #007A33;
+	border-bottom: solid 3px #007A33;
+	box-shadow: 2px 2px #BA9653;
+}
+
+.colorTitreEquipe1{
+	color: #007A33;
+}
+
+.colorBorderEquipe2{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #000000;
+	border-bottom: solid 3px #000000;
+	box-shadow: 2px 2px #FFFFFF;
+}
+
+.colorTitreEquipe2{
+	color: #000000;
+}
+
+.colorBorderEquipe3{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #006BB6;
+	border-bottom: solid 3px #006BB6;
+	box-shadow: 2px 2px #F58426;
+}
+
+.colorTitreEquipe3{
+	color: #006BB6;
+}
+
+.colorBorderEquipe4{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #ed174c;
+	border-bottom: solid 3px #ed174c;
+	box-shadow: 2px 2px #006bb6;
+}
+
+.colorTitreEquipe4{
+	color: #ed174c;
+}
+
+.colorBorderEquipe5{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #000000;
+	border-bottom: solid 3px #000000;
+	box-shadow: 2px 2px #ce1141;
+}
+
+.colorTitreEquipe5{
+	color: #000000;
+}
+
+/* Central */
+
+.colorBorderEquipe6{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #000000;
+	border-bottom: solid 3px #000000;
+	box-shadow: 2px 2px #CE1141;
+}
+
+.colorTitreEquipe6{
+	color: #000000;
+}
+
+.colorBorderEquipe7{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #860038;
+	border-bottom: solid 3px #860038;
+	box-shadow: 2px 2px #FDBB30;
+}
+
+.colorTitreEquipe7{
+	color: #860038;
+}
+
+.colorBorderEquipe8{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #1d42ba;
+	border-bottom: solid 3px #1d42ba;
+	box-shadow: 2px 2px #C8102E;
+}
+
+.colorTitreEquipe8{
+	color: #1d42ba;
+}
+
+.colorBorderEquipe9{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #002D62;
+	border-bottom: solid 3px #002D62;
+	box-shadow: 2px 2px #FDBB30;
+}
+
+.colorTitreEquipe9{
+	color: #002D62;
+}
+
+.colorBorderEquipe10{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #00471B;
+	border-bottom: solid 3px #00471B;
+	box-shadow: 2px 2px #EEE1C6;
+}
+
+.colorTitreEquipe10{
+	color: #00471B;
+}
+
+/* Southeast */
+
+.colorBorderEquipe11{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #e03a3e;
+	border-bottom: solid 3px #e03a3e;
+	box-shadow: 2px 2px #C1D32F;
+}
+
+.colorTitreEquipe11{
+	color: #e03a3e;
+}
+
+.colorBorderEquipe12{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #1d1160;
+	border-bottom: solid 3px #1d1160;
+	box-shadow: 2px 2px #00788C;
+}
+
+.colorTitreEquipe12{
+	color: #1d1160;
+}
+
+.colorBorderEquipe13{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #98002E;
+	border-bottom: solid 3px #98002E;
+	box-shadow: 2px 2px #F9A01B;
+}
+
+.colorTitreEquipe13{
+	color: #98002E;
+}
+
+.colorBorderEquipe14{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #0077c0;
+	border-bottom: solid 3px #0077c0;
+	box-shadow: 2px 2px #C4ced4;
+}
+
+.colorTitreEquipe14{
+	color: #0077c0;
+}
+
+.colorBorderEquipe15{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #002B5C;
+	border-bottom: solid 3px #002B5C;
+	box-shadow: 2px 2px #e31837;
+}
+
+.colorTitreEquipe15{
+	color: #002B5C;
+}
+
+/* Pacific */
+
+.colorBorderEquipe16{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #1D428A;
+	border-bottom: solid 3px #1D428A;
+	box-shadow: 2px 2px #ffc72c;
+}
+
+.colorTitreEquipe16{
+	color: #1D428A;
+}
+
+.colorBorderEquipe17{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #c8102E;
+	border-bottom: solid 3px #c8102E;
+	box-shadow: 2px 2px #1d428a;
+}
+
+.colorTitreEquipe17{
+	color: #c8102E;
+}
+
+.colorBorderEquipe18{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #552583;
+	border-bottom: solid 3px #552583;
+	box-shadow: 2px 2px #FDB927;
+}
+
+.colorTitreEquipe18{
+	color: #552583;
+}
+
+.colorBorderEquipe19{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #1d1160;
+	border-bottom: solid 3px #1d1160;
+	box-shadow: 2px 2px #e56020;
+}
+
+.colorTitreEquipe19{
+	color: #1d1160;
+}
+
+.colorBorderEquipe20{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #5a2d81;
+	border-bottom: solid 3px #5a2d81;
+	box-shadow: 2px 2px #63727A;
+}
+
+.colorTitreEquipe20{
+	color: #5a2d81;
+}
+
+/* Southwest */
+
+.colorBorderEquipe21{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #00538C;
+	border-bottom: solid 3px #00538C;
+	box-shadow: 2px 2px #B8C4CA;
+}
+
+.colorTitreEquipe21{
+	color: #00538C;
+}
+
+.colorBorderEquipe22{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #CE1141;
+	border-bottom: solid 3px #CE1141;
+	box-shadow: 2px 2px #2C7AA1;
+}
+
+.colorTitreEquipe22{
+	color: #CE1141;
+}
+
+.colorBorderEquipe23{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #12173F;
+	border-bottom: solid 3px #12173F;
+	box-shadow: 2px 2px #5D76A9;
+}
+
+.colorTitreEquipe23{
+	color: #12173F;
+}
+
+.colorBorderEquipe24{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #C8102E;
+	border-bottom: solid 3px #C8102E;
+	box-shadow: 2px 2px #85714D;
+}
+
+.colorTitreEquipe24{
+	color: #C8102E;
+}
+
+.colorBorderEquipe25{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #000000;
+	border-bottom: solid 3px #000000;
+	box-shadow: 2px 2px #c4ced4;
+}
+
+.colorTitreEquipe25{
+	color: #000000;
+}
+
+/* Northwest */
+
+.colorBorderEquipe26{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #0E2240;
+	border-bottom: solid 3px #0E2240;
+	box-shadow: 2px 2px #FEC524;
+}
+
+.colorTitreEquipe26{
+	color: #0E2240;
+}
+
+.colorBorderEquipe27{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #0C2340;
+	border-bottom: solid 3px #0C2340;
+	box-shadow: 2px 2px #236192;
+}
+
+.colorTitreEquipe27{
+	color: #0C2340;
+}
+
+.colorBorderEquipe28{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #007ac1;
+	border-bottom: solid 3px #007ac1;
+	box-shadow: 2px 2px #ef3b24;
+}
+
+.colorTitreEquipe28{
+	color: #007ac1;
+}
+
+.colorBorderEquipe29{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #000000;
+	border-bottom: solid 3px #000000;
+	box-shadow: 2px 2px #E03A3E;
+}
+
+.colorTitreEquipe29{
+	color: #000000;
+}
+
+.colorBorderEquipe30{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px #002B5C;
+	border-bottom: solid 3px #002B5C;
+	box-shadow: 2px 2px #F9A01B;
+}
+
+.colorTitreEquipe30{
+	color: #002B5C;
+}
+
 
 /************************************************************************************************************************/

@@ -28,7 +28,7 @@
 		</ul>
 	</nav>
 	
-	<br/><br/>
+	<br/><div class="containerEquipePrincipal"><div><br/>
 	
 	<?php
 	
@@ -36,8 +36,9 @@
 	
 	?>
 	
+	<br/><br/></div></div>
 	
-	<br/><br/><br/>
+	<br/>
 
 	<footer>
 		<table>
