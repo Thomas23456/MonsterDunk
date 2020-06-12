@@ -10,22 +10,21 @@
 	</head>
 
 <body>
+	<div class="conteneurLogo">
+			<a href="../index.html"><img src="../images/logo6.png" alt="Image logo Monster Dunk" class="logo effect"/></a>
+		</div>
+		<div class="conteneurReseaux">
+			<a href="" class="logos"><img src="../images/facebook.png" alt="Image logo facebook" class="reseaux effect"/></a>
+			<a href="" class="logos"><img src="../images/instagram.png" alt="Image logo instagram" class="reseaux effect"/></a>
+			<a href="" class="logos"><img src="../images/twitter.png" alt="Image logo twitter" class="reseaux effect"/></a>
+			<a href="" class="logos"><img src="../images/youtube.png" alt="Image logo youtube" class="reseaux effect"/></a>
+	</div>
 	<nav>
 		<ul>
-			<li><a href=""><img src="../images/monsterDunkLogo5.png" alt="Image logo Monster Dunk" class="logo effect"/></a></li><!--
-			--><li><a href="" class="textMenu">News</a></li><!--
-			--><li><a href="" class="textMenu">Equipes</a></li><!--
+			<li><a href="" class="textMenu">News</a></li><!--
+			--><li><a href="../pages/equipes.php" class="textMenu">Equipes</a></li><!--
 			--><li><a href="" class="textMenu">Matchs</a></li><!--
-			--><li><a href="" class="textMenu bord">Résultats</a></li><!--
-			--><li>
-				<ul>
-					<li><a href="" class="logos"><img src="../images/facebook.png" alt="Image logo facebook" class="reseaux effect"/></a></li><!--
-					--><li><a href="" class="logos"><img src="../images/instagram.png" alt="Image logo instagram" class="reseaux effect"/></a></li><!--
-					--><li><a href="" class="logos"><img src="../images/twitter.png" alt="Image logo twitter" class="reseaux effect"/></a></li><!--
-					--><li><a href="" class="logos"><img src="../images/youtube.png" alt="Image logo youtube" class="reseaux effect"/></a></li>
-				</ul>
-			</li>
-		</ul>
+			--><li><a href="../pages/resultat.php" class="textMenu bord">Résultats</a></li>
 	</nav>
 	
 	<br/><div class="containerEquipePrincipal"><div><br/>
