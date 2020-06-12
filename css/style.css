@@ -428,4 +428,87 @@ h3{
     opacity: 1;
 }
 
+/* PAGE EQUIPES */
+
+.titreEquipe{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.titreEquipe > div{
+	width: 10%;
+}
+
+.ligne{
+	width: 45%;
+	height: 0;
+	border-top: solid 2px black;
+}
+
+.containerEquipe{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	border-top: solid 2px black;
+	border-bottom: solid 2px black;
+}
+
+.imageEquipe{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+}
+
+.imageEquipe > img{
+	width: 60%;
+}
+
+.containerInfosEquipe{
+	width: 60%;
+}
+
+.containerInfosEquipe > h3{
+	text-transform: uppercase;
+}
+
+.infosEquipe{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.infosEquipe > div{
+	padding: 0 1.5%;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.infosEquipe > div > div{
+	font-weight: bold;
+}
+
+.bilanEquipe{
+	width: 20%;
+}
+
+.bilanEquipe > div{
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.bilanEquipe > div > div{
+	font-weight: bold;
+	padding: 0 1.5%;
+}
+
+.positionEquipe{
+	font-weight: bold;
+	padding: 0 2% 0 0;
+}
+
 /************************************************************************************************************************/
