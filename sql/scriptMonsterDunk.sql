@@ -109,6 +109,13 @@ CREATE TABLE IF NOT EXISTS `Poste` (
   PRIMARY KEY (`id_poste`))
 ENGINE = InnoDB;
 
+INSERT INTO `Poste` (`id_poste`, `libelle`) VALUES
+(1,'Meneur'),
+(2,'Arrière'),
+(3,'Ailier'),
+(4,'Alier fort'),
+(5,'Pivot');
+
 
 -- -----------------------------------------------------
 -- Table `Joueur`
@@ -117,10 +124,6 @@ CREATE TABLE IF NOT EXISTS `Joueur` (
   `id_joueur` INT NOT NULL,
   `nom` VARCHAR(32) NOT NULL,
   `prenom` VARCHAR(32) NOT NULL,
-  `numero_maillot` INT NOT NULL,
-  `moyenne_points` DECIMAL(3,1) NULL,
-  `moyenne_rebond` DECIMAL(3,1) NULL,
-  `moyenne_passe` DECIMAL(3,1) NULL,
   `Equipe_id_equipe` INT NOT NULL,
   `Poste_id_poste` INT NOT NULL,
   PRIMARY KEY (`id_joueur`),
@@ -137,6 +140,25 @@ CREATE TABLE IF NOT EXISTS `Joueur` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+INSERT INTO `Joueur` (`id_joueur`, `nom`, `prenom`, `Equipe_id_equipe`, `Poste_id_poste`) VALUES
+(1,'Jaylen','Brown',2,2),
+(2,'Carsen','Edwards',2,1),
+(3,'Tacko','Fall',2,5),
+(4,'Javonte','Green',2,2),
+(5,'Gordon','Hayward',2,3),
+(6,'Enes','Kanter',2,5),
+(7,'Romeo','Langford',2,2),
+(8,'Semi','Ojeleye',2,3),
+(9,'Vincent','Poirier',2,5),
+(10,'Marcus','Smart',2,1),
+(11,'Jayson','Tatum',2,3),
+(12,'Daniel','Theis',2,4),
+(13,'Kemba','Walker',2,1),
+(14,'Bradley','Wanamaker',2,1),
+(15,'Tremont','Waters',2,1),
+(16,'Grant','Williams',2,3),
+(17,'Robert','Williams',2,4);
 
 
 -- -----------------------------------------------------
