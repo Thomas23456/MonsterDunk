@@ -101,3 +101,73 @@ $('.conteneurBulls').click(function(){
     $(".videoGo")[0].load();
 });
 
+$(document).ready(function(){
+    $('.joueurListe').hide();
+})
+
+$('.equipeMenuCeltics').click(function(){
+    if ($(".conteneurEquipeCeltics .deplierJeu")[0]){
+        $( ".joueurListeCeltics" ).slideUp( "slow", function() {
+            $('.joueurListeCeltics').hide();
+            $('.equipeMenuCeltics').removeClass('deplierJeu')
+        });
+    } else {
+        $( ".joueurListeCeltics" ).slideDown( "slow", function() {
+            $('.joueurListeCeltics').show();
+            $('.equipeMenuCeltics').addClass('deplierJeu')
+        });
+    }
+})
+
+$('.listingJoueurRaptors').click(function(){
+    if ($(".conteneurEquipeRaptors .deplierJeu")[0]){
+        $('.listingJoueurRaptors i').text('keyboard_arrow_down')
+        $('.listingJoueurRaptors i').removeClass('versHaut')
+        $( ".joueurListeRaptors" ).slideUp( "slow", function() {
+            $('.joueurListeRaptors').hide();
+            $('.equipeMenuRaptors').removeClass('deplierJeu')
+
+        });
+    } else {
+        $('.listingJoueurRaptors i').text('keyboard_arrow_up')
+        $('.listingJoueurRaptors i').addClass('versHaut')
+        $( ".joueurListeRaptors" ).slideDown( "slow", function() {
+            $('.joueurListeRaptors').show();
+            $('.equipeMenuRaptors').addClass('deplierJeu')
+
+        });
+    }
+})
+
+$('.listingJoueurRaptors').click(function(){
+    if ($(".conteneurEquipeRaptors .deplierJeu")[0]){
+        $('.listingJoueurRaptors i').text('keyboard_arrow_down')
+        $('.listingJoueurRaptors i').removeClass('versHaut')
+        $( ".joueurListeRaptors" ).slideUp( "slow", function() {
+            $('.joueurListeRaptors').hide();
+            $('.equipeMenuRaptors').removeClass('deplierJeu')
+
+        });
+    } else {
+        $('.listingJoueurRaptors i').text('keyboard_arrow_up')
+        $('.listingJoueurRaptors i').addClass('versHaut')
+        $( ".joueurListeRaptors" ).slideDown( "slow", function() {
+            $('.joueurListeRaptors').show();
+            $('.equipeMenuRaptors').addClass('deplierJeu')
+
+        });
+    }
+})
+
+$(function() {
+    $(".sortable_list").sortable({
+        connectWith: ".connectedSortable",    
+        receive: function(event, ui) {
+            if ($(this).children().length > 1) {
+                $(ui.sender).sortable('cancel');
+            }
+        }
+    }).disableSelection();
+});
+
+

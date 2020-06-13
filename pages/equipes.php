@@ -21,9 +21,9 @@
 	</div>
 	<nav>
 		<ul>
-			<li><a href="" class="textMenu">News</a></li><!--
+			<li><a href="../pages/news.php" class="textMenu">News</a></li><!--
 			--><li><a href="../pages/equipes.php" class="textMenu">Equipes</a></li><!--
-			--><li><a href="" class="textMenu">Matchs</a></li><!--
+			--><li><a href="../pages/match.php" class="textMenu">Matchs</a></li><!--
 			--><li><a href="../pages/resultat.php" class="textMenu bord">Résultats</a></li>
 	</nav>
 	

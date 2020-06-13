@@ -325,7 +325,7 @@ h3{
 /** Redimension d'image **/
 
 .conteneurDivisionPoint img{
-    height: 5rem;
+    height: 4rem;
 }
 
 /*******/
@@ -426,6 +426,85 @@ h3{
     width: 100%;
     border-radius: 50%;
     opacity: 1;
+}
+
+/*** Jouer au jeu ***/
+
+#conteneurJouerJeu{
+	height: 100vh;
+	padding-top: 3rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+#conteneurJouerJeuGauche{
+	width: 40%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	justify-content: center;
+}
+
+#conteneurJouerJeuDroit{
+	width: 40%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+#conteneurJouerJeuDroit span{
+	text-align: center;
+	margin-bottom: .5rem;
+}
+
+.titreJouerJeu{
+	color: white;
+	font-size: 2rem;
+}
+
+.titreJouerJeuMain{
+	color: gold;
+	font-size: 4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.textJouerJeu{
+	color: white;
+	font-size: 1rem;
+}
+
+.boutonJouerJeu{
+	width: 20%;
+	text-align: center;
+	text-decoration: none;
+	border: 5px double white;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	margin-top: 3rem;
+	padding-left: 3rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-right: 3rem;
+	color: black;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
+	background-color: rgb(208, 168, 92);
+	transition: all .5s ease-in-out;
+}
+
+.boutonJouerJeu:hover{
+	background-color: rgb(255, 213, 136);
+	transition: all .5s ease-in-out;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	font-size: 1.5rem;
+
 }
 
 /* PAGE EQUIPES */

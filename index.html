@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="pages/news.php" class="textMenu">News</a></li><!--
 				--><li><a href="pages/equipes.php" class="textMenu">Equipes</a></li><!--
-				--><li><a href="" class="textMenu">Matchs</a></li><!--
+				--><li><a href="pages/match.php" class="textMenu">Matchs</a></li><!--
 				--><li><a href="pages/resultat.php" class="textMenu bord">Résultats</a></li>
 			</ul>
 		</nav>
@@ -107,7 +107,7 @@
 		<div id="conteneurTitre">
 			<span class="premierTitre">Choisis ton</span>
 			<span>équipe</span>
-			<a class="plusEquipe" href="#">Plus d'équipes ...</a>
+			<a class="plusEquipe" href="pages/equipes.php">Plus d'équipes ...</a>
 		</div>
 		<div id="conteneurChoix">
 			<div class="conteneurChoixSelection">
@@ -115,6 +115,7 @@
 						<div class="conteneurDivisionPoint conteneurLakers">
 							<div class="divisionIcone">
 								<img class="logoEquipe" src="images/clubs/lakers.png" alt="logo des Lakers">
+								<span class="test"></span>
 								<span class="logoTitre">Lakers</span>
 							</div>
 							<div class="trait"></div>
@@ -175,8 +176,17 @@
 			</div>
 		</div>     
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="js/main.js"></script>
+	<div id="conteneurJouerJeu">
+		<div id="conteneurJouerJeuGauche">
+			<img src="images/nba.png" alt="nba">
+		</div>
+		<div id="conteneurJouerJeuDroit">
+			<span class="titreJouerJeu">Créez votre</span>
+			<span class="titreJouerJeuMain">Équipe</span>
+			<span class="textJouerJeu">Concevez votre propre Équipe en choisissant parmi les joueurs de la NBA !</span>
+			<a class="boutonJouerJeu" href="pages/jeu.php">Jouer</a>
+		</div>
+	</div>
 
 	<br/><br/><br/>
 
@@ -201,5 +211,7 @@
 			</tr>
 		</table>
 	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

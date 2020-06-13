@@ -1,0 +1,365 @@
+/** JEU **/
+body, ul, li{
+    margin:0;
+    padding: 0;
+}
+
+#conteneurJeu{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+}
+
+#conteneurJeuGauche{
+    width: 45%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#conteneurEquipeAll{
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.conteneurEquipe{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 1rem;
+}
+
+.enteteEquipe{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    padding: 1rem;
+}
+
+.nomEquipe{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.boutonAjoutEquipe{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    text-decoration: none;
+    color :black;
+    font-size: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+
+.boutonAjoutEquipe:hover{
+    color: gold;
+    transition: all .5s ease-in-out;
+}
+
+.conteneurListeEquipe ul{
+    border-bottom-left-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    padding: 1rem;
+}
+
+.conteneurListeEquipe li{
+    width: 100%;
+    list-style-type: none;
+}
+
+/***** COULEUR DES EQUIPES*****/
+
+.enteteEquipeCeltics{
+    background-color: #007A33;
+}
+
+.conteneurEquipeCeltics .conteneurListeEquipe ul{
+    background-color: #00ac48;
+}
+
+.enteteEquipeRaptors{
+    background-color: #ce1141;
+}
+
+.conteneurEquipeRaptors .conteneurListeEquipe ul{
+    background-color: #e42756;
+}
+
+
+/*******PARTIE TERRAIN********/
+
+#conteneurJeuDroit{
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+#conteneurSelectionEquipe{
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#conteneurTerrain{
+    width: 815px;
+    height: 700px;
+    background-image: url('../images/terrainPoste.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.csortable{
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 15%;
+}
+
+#conteneurTerrain .c1{
+    height: 27%;
+}
+
+#conteneurTerrain .c2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#conteneurTerrain .c2{
+    margin-left: 42.5%;
+}
+
+#conteneurTerrain .c2{
+    height: 8%;
+}
+
+#conteneurTerrain .c3{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 2.5%;
+}
+
+#conteneurTerrain .c4{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-left: 13%;
+}
+
+#conteneurTerrain .c4{
+    height: 8%;
+}
+
+#conteneurTerrain .c5{
+    height: 2.5%;
+}
+
+#conteneurTerrain .c6{
+    margin-left: 49.5%;
+}
+
+#conteneurTerrain .c6{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 7.5%;
+}
+
+#conteneurTerrain .c7{
+    height: 2%;
+}
+
+#conteneurTerrain .c8{
+    margin-left: 24%;
+}
+
+#conteneurTerrain .c8{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 8%;
+}
+
+#conteneurTerrain .c9{
+    height: 5.5%;
+}
+
+#conteneurTerrain .c10{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-left: 60.8%;
+}
+
+#conteneurTerrain .c10{
+    height: 8%;
+}
+
+.selectionJoueur{
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.selectionJoueur li{
+    list-style-type: none;
+    margin-right: .5rem;
+    border: 1px solid black;
+}
+
+.csortable li{
+    list-style-type: none;
+}
+
+.libelleEquipe{
+    font-size: 1.5rem;
+}
+
+.listingJoueur{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.listingJoueur:hover{
+    color: gold;
+    transition: all .5s ease-in-out;
+}
+
+.titreGeneralEquipe{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.instructionEquipe{
+    margin-bottom: 1rem;
+}
+
+.instructionTitre{
+    text-decoration: underline;
+}
+
+.conteneurJoueurSelectionCeltics{
+    background-color: #00ac48;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: 20%;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: .5rem
+}
+
+.nomPrenom{
+    margin-left: .5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.sousligne{
+    text-decoration: underline;
+}
+
+.veuillezSelectionner{
+    font-size: 1.5rem;
+}
+
+#conteneurResetValidation{
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#conteneurResetValidation > a{
+    border-radius: 20px;
+    font-size: 2rem;
+    padding-top: .5rem;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.resetSelection,.valideSelection{
+    background-color: rgb(180, 180, 180);
+    transition: all .5s ease-in-out;
+}
+
+.resetSelection:hover{
+    background-color: rgba(216, 63, 63, 0.829);
+    transition: all .5s ease-in-out;
+}
+
+.valideSelection:hover{
+    background-color: rgba(75, 241, 89, 0.856);
+    transition: all .5s ease-in-out;
+}
+
+/** Redirection **/
+.redirection{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.conteneurRedirect{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+    padding: 3rem;
+    border: 0px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 5px 5px black;
+    background-color: black;
+}
+
+.conteneurRedirect span{
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.conteneurRedirect{
+    text-align: center;
+}
+
+.conteneurRedirect img {
+    margin-top: 2rem;
+    width: 40%;
+    transition: all .5s ease-in-out;
+}
+
+.conteneurRedirect img:hover{
+    transform: scale(.8);
+    transition: all .5s ease-in-out;
+}
