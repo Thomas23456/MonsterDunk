@@ -1,13 +1,30 @@
 
 CREATE TABLE IF NOT EXISTS `Article` (
   `id_article` INT NOT NULL,
-  `nom` VARCHAR(32) NOT NULL,
+  `type_article` VARCHAR(32) NOT NULL,
+  `titre` VARCHAR(32) NOT NULL,
   `auteur` VARCHAR(32) NOT NULL,
   `date_ajout_article` DATE NOT NULL,
   `description` VARCHAR(500) NOT NULL,
   `lien_img` VARCHAR(64) NOT NULL,
   PRIMARY KEY (`id_article`))
 ENGINE = InnoDB;
+
+INSERT INTO `Article` (`id_article`,`type_article`,`titre`,`auteur`,`date_ajout_article`,`description`,`lien_img`) VALUES
+(1,'News','LeBron James vs Stephen Curry : une bataille sans merci','BFM','2020-06-09','De 2015 à 2018, LeBron James avec les Cavs et Stephen Curry avec les Warriors se sont affrontés durant 4 finales consécutives. Même si le bilan est à l\'avantage du dernier avec 3 victoires contre une, le meneur reconnaît qu\'affronter le King a joué un grand rôle dans son évolution en tant que joueur et personne.','article3.jpeg'),
+(2,'News','Pourquoi LeBron a refusé de participer à la grande réunion des joueurs','Cnews','2020-06-06','Draymond Green et les réseaux sociaux décidément… Un utilisateur Twitter a scruté le profil de l’intérieur des Warriors et a constaté un « like » bien gênant sur un tweet contre Ayesha Curry… Erreur ou non, toujours est-il que ça fait tâche.','article6.jpg'),
+(4,'News','Luka Doncic réagit avec humour à la polémique le concernant','L\'Equipe','2020-06-003','Luka Doncic est-il hors de forme ? C’est la grande question à Dallas ces derniers jours. Si l’entraineur personnel du joueur a corrigé ses propos, le Slovène est enfin revenu sur cette fausse polémique.','article2.jpg'),
+(5,'Article','Patrick Ewing positif au coronavirus','Quotidien','2020-05-29','L’ancienne gloire des New York Knicks, membre de la première Dream Team en 1992, a annoncé avoir été testée positive au Coronavirus','article7.jpg'),
+(6,'News','Quatre Français sont en vacances, mais pour quelle raison ?','BFM','2020-05-25','La NBA a annoncé qu\'elle reprendrait sa saison le 31 juillet avec 22 franchises, ce qui signifie que 8 ne seront pas conviées à Orlando. Quatre joueurs français sont donc officiellement en vacances.','article8.jpg'),
+(7,'News','NBA : les gagnants et perdants de la reprise de la saison','Cnews','2020-05-23','Stephen Curry et Klay Thompson ne rejoueront pas avant décembre 2020. Le plan de reprise de la NBA s\'avère favorable aux Golden State Warriors, derniers à l\'Ouest.','article10.jpg'),
+(8,'Article','San Antonio : Lonnie Walker IV révèle un terrible secret et se coupe les cheveux','Quotidien','2020-05-20','L\'arrière des San Antonio Spurs Lonnie Walker IV (21 ans) a décidé de se débarrasser de son originale coupe de cheveux. Une coupe de cheveux qui cachait un terrible secret.','article9.jpg'),
+(9,'Article','NBA 2K21 : Un premier trailer avec Zion Williamson sur la PS5','L\'Equipe','2020-05-17','Alors que la Playstation 5 commence à se dévoiler et sortira lors du dernier trimestre 2020, Sony et 2K Sports ont diffusé jeudi soir un court mais excitant trailer de NBA 2K21','article11.jpg'),
+(10,'News','L’ancien coach d’Allen Iverson donne le vrai problème des Sixers','BFM','2020-05-15','Tobias Harris ne peut plus jouer trois dans cette NBA. Idem pour Al Horford qui est maintenant un pivot. En faisant le choix de jouer grand, les Sixers se ralentissent et embouteillent leur raquette.','article12.jpg'),
+(11,'News','Théo Maledon, un Rouennais bientôt en NBA ? « Une trajectoire à la Tony Parker »','Cnews','2020-05-09','Prodige du basket-ball, Théo Maledon, né à Rouen il y a 18 ans, est candidat à la NBA, la plus prestigieuse ligue du monde. Son recrutement pourrait s\'opérer le 25 juin 2020.','article13.jpg'),
+(12,'News','Joakim Noah « prêt » pour la fin de saison avec les Clippers','Cnews','2020-05-07','Après un an d\'absence, le pivot français se dit prêt à finir la saison avec les Los Angeles Clippers, avec lesquels il s\'était engagé début mars pour dix jours avant l\'interruption de la NBA due au Covid-19.','article14.jpg'),
+(13,'Article','Comment Spencer Haywood a perdu 10… milliards à cause de son agent','L\'Equipe','2020-05-05','Spencer Haywood avait une opportunité incroyable dans les années 70. Mais un mauvais conseil lui a fait rater une fortune.','article15.jpg'),
+(14,'News','Mort de George Floyd : Michael Jordan va faire un don de 100 millions de dollars','BFM','2020-05-04','Après avoir pris position à la suite de la mort de George Floyd, un homme noir tué par la police à Minneapolis le 25 mai, Michael Jordan a décidé de faire un don de 100 millions de dollars à des organisations oeuvrant contre les discriminations raciales.','article16.jpg'),
+(15,'Article','La vérité sur la relation entre Kyrie Irving et LeBron James selon un entraîneur des Cavaliers','Quotidien','2020-05-01','Il semble évident que LeBron James et Kyrie Irving s’apprécient et se respectent. Mais il y avait de la friture sur la ligne à un moment. Rien de bien méchant. Sans doute pas un vrai clash. Plutôt des envies différentes.','article17.jpg');
 
 -- -----------------------------------------------------
 -- Table `Division`

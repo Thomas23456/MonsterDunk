@@ -17,12 +17,12 @@ $( ".conteneurLakers" ).click(function() {
     $( ".imageJoueur" ).animate({
         opacity: 0,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreLakers.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreLakers.png');
     });
     $( ".imageJoueur" ).animate({
         opacity: 1,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreLakers.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreLakers.png');
     });
   });
 
@@ -30,12 +30,12 @@ $('.conteneurRaptors').click(function(){
     $( ".imageJoueur" ).animate({
         opacity: 0,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreRaptors.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreRaptors.png');
     });
     $( ".imageJoueur" ).animate({
         opacity: 1,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreRaptors.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreRaptors.png');
     });
   });
 
@@ -43,12 +43,12 @@ $('.conteneurCeltics').click(function(){
     $( ".imageJoueur" ).animate({
         opacity: 0,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreCeltics.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreCeltics.png');
     });
     $( ".imageJoueur" ).animate({
         opacity: 1,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreCeltics.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreCeltics.png');
     });
   });
 
@@ -56,12 +56,12 @@ $('.conteneurBucks').click(function(){
     $( ".imageJoueur" ).animate({
         opacity: 0,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreBucks.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreBucks.png');
     });
     $( ".imageJoueur" ).animate({
         opacity: 1,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreBucks.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreBucks.png');
     });
 });
 
@@ -69,12 +69,12 @@ $('.conteneurBulls').click(function(){
     $( ".imageJoueur" ).animate({
         opacity: 0,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreBulls.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreBulls.png');
     });
     $( ".imageJoueur" ).animate({
         opacity: 1,
     }, 500, function() {
-        $('.imageJoueur').attr('src','images/carreBulls.png');
+        $('.imageJoueur').attr('src','images/imagesEquipes/carreBulls.png');
     });
 });
 

@@ -29,7 +29,7 @@
     <div class="conteneurPageResultat">
         <div class="conteneurResultat">
             <div class="conteneurTitreResultat">
-                <img class="trophee" src="../images/award.png" alt="nba trophée">
+                <img class="trophee" src="../images/resultats/award.png" alt="nba trophée">
                 <?php
                     try{
                         $cnx = new PDO('mysql:host=localhost;dbname=monsterdunk;port=3306', 'root','');
