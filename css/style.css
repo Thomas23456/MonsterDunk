@@ -442,6 +442,15 @@ h3{
 	width: 80%;
 }
 
+.containerEquipePrincipal > div > a{
+	text-decoration: none;
+	color: black;
+}
+
+.containerEquipePrincipal > div > a:hover .containerEquipe{
+	background: rgba(200, 200, 200, 1);
+}
+
 .titreEquipe{
 	width: 100%;
 	display: flex;
@@ -453,6 +462,19 @@ h3{
 
 .titreEquipe > div{
 	width: 10%;
+}
+
+.titreEquipe2{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.titreEquipe2 > div{
+	width: 14%;
 }
 
 .ligne{
@@ -469,6 +491,7 @@ h3{
 	border-top: solid 2px black;
 	border-bottom: solid 2px black;
 	background: white;
+	transition: all .5s ease; 
 }
 
 .imageEquipe{
@@ -948,5 +971,167 @@ h3{
 	padding: 0 2% 0 0;
 }
 
+/* DETAILS EQUIPE */
+
+.containerDetailsEquipe{
+	width: 100%;
+	border: solid 2px white;
+	background: white;
+	border-radius: 5px;
+}
+
+.infosDetailsEquipe{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowarp;
+}
+
+.infosDetailsEquipe > div{
+	width: 16.5%;
+	text-align: center;
+	box-shadow: 3px 4px 5px grey;
+	border-radius: 5px;
+	border-left: solid 2px black;
+	border-top: solid 1px black;
+	margin: 0 1%;
+}
+
+.equipeDetailsResultats{
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.resultatsDisplay{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+}
+
+.competDetailsEquipe{
+	font-size: 1.1em;
+	font-style: italic;
+}
+
+.containerComposition{
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+
+.titreCompo{
+	display: flex;
+	flex-flow: row nowarp;
+	justify-content: center;
+}
+
+.composition1{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	text-align: center;
+}
+
+.composition1 > div > h3{
+	width: 500px;
+	padding: 0;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.composition1 > div > img{
+	width: 100px;
+	overflow: hidden;
+	border: solid 2px black;
+	border-radius: 10px 0 10px 0;
+	box-shadow: 2px 2px 2px white;
+	margin: 0 1%;
+}
+
+.composition2{
+	position: absolute;
+	width: 100%;
+	top: 125px;
+	text-align: center;
+}
+
+.composition2 > div > h3{
+	width: 500px;
+	padding: 0;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.composition2 > div > img{
+	width: 100px;
+	overflow: hidden;
+	border: solid 2px black;
+	border-radius: 0 10px 0 10px;
+	box-shadow: 2px 2px 2px white;
+	margin: 0 1%;
+}
+
+.composition3{
+	position: absolute;
+	width: 100%;
+	top: 250px;
+	text-align: center;
+}
+
+.composition3 > div > h3{
+	width: 500px;
+	padding: 0;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.composition3 > div > img{
+	width: 100px;
+	overflow: hidden;
+	border: solid 2px black;
+	border-radius: 10px 0 10px 0;
+	box-shadow: 2px 2px 2px white;
+	margin: 0 1%;
+}
+
+.composition4{
+	position: absolute;
+	width: 100%;
+	top: 375px;
+	text-align: center;
+}
+
+.composition4 > div > h3{
+	width: 500px;
+	padding: 0;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.composition4 > div > img{
+	width: 100px;
+	overflow: hidden;
+	border: solid 2px black;
+	border-radius: 0 10px 0 10px;
+	box-shadow: 2px 2px 2px white;
+	margin: 0 1%;
+}
+
+.composition5{
+	position: absolute;
+	width: 100%;
+	top: 500px;
+	text-align: center;
+}
+
+.composition5 > div > h3{
+	width: 500px;
+	padding: 0;
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.composition5 > div > img{
+	width: 100px;
+	overflow: hidden;
+	border: solid 2px black;
+	border-radius: 10px 0 10px 0;
+	box-shadow: 2px 2px 2px white;
+	margin: 0 1%;
+}
 
 /************************************************************************************************************************/

@@ -18,7 +18,7 @@ $titre1 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Atlantic<b
 echo($titre1);
 
 //requête à exécuter
-$RQTEquipes1 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+$RQTEquipes1 = "SELECT eq.id_equipe, eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
 				FROM equipe AS eq
 				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
 				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
@@ -33,7 +33,7 @@ $cpt = 0;
 
 while($ligne1 = $RQTExecEquipes1->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes1 = $affichEquipes1.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes1 = $affichEquipes1.'<a href="detailsEquipe.php?id='.$ligne1['id_equipe'].'&nb='.$cpt.'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne1['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -46,7 +46,7 @@ while($ligne1 = $RQTExecEquipes1->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch 
 											<div>Nombre de victoires : <div>'.$ligne1['victoire'].'</div></div><br/><br/>
 											<div>Nombre de défaites : <div>'.$ligne1['defaite'].'</div></div><br/><br/>
 										</div>
-									</div><br/>'; 
+									</div></a><br/>'; 
 }
 
 echo($affichEquipes1); //on affiche le résultat
@@ -56,7 +56,7 @@ $titre2 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Central<br
 echo($titre2);
 
 //requête à exécuter
-$RQTEquipes2 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+$RQTEquipes2 = "SELECT eq.id_equipe, eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
 				FROM equipe AS eq
 				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
 				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
@@ -70,7 +70,7 @@ $affichEquipes2 = ''; //la variable à remplir
 
 while($ligne2 = $RQTExecEquipes2->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes2 = $affichEquipes2.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes2 = $affichEquipes2.'<a href="detailsEquipe.php?id='.$ligne2['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne2['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -83,7 +83,7 @@ while($ligne2 = $RQTExecEquipes2->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch 
 											<div>Nombre de victoires : <div>'.$ligne2['victoire'].'</div></div><br/><br/>
 											<div>Nombre de défaites : <div>'.$ligne2['defaite'].'</div></div><br/><br/>
 										</div>
-									</div><br/>'; 
+									</div></a><br/>'; 
 }
 
 echo($affichEquipes2); //on affiche le résultat
@@ -93,7 +93,7 @@ $titre3 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Southeast<
 echo($titre3);
 
 //requête à exécuter
-$RQTEquipes3 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+$RQTEquipes3 = "SELECT eq.id_equipe, eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
 				FROM equipe AS eq
 				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
 				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
@@ -107,7 +107,7 @@ $affichEquipes3 = ''; //la variable à remplir
 
 while($ligne3 = $RQTExecEquipes3->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes3 = $affichEquipes3.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes3 = $affichEquipes3.'<a href="detailsEquipe.php?id='.$ligne3['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne3['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -120,7 +120,7 @@ while($ligne3 = $RQTExecEquipes3->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch 
 											<div>Nombre de victoires : <div>'.$ligne3['victoire'].'</div></div><br/><br/>
 											<div>Nombre de défaites : <div>'.$ligne3['defaite'].'</div></div><br/><br/>
 										</div>
-									</div><br/>'; 
+									</div></a><br/>'; 
 }
 
 echo($affichEquipes3); //on affiche le résultat
@@ -130,7 +130,7 @@ $titre4 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Pacific<br
 echo($titre4);
 
 //requête à exécuter
-$RQTEquipes4 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+$RQTEquipes4 = "SELECT eq.id_equipe, eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
 				FROM equipe AS eq
 				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
 				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
@@ -144,7 +144,7 @@ $affichEquipes4 = ''; //la variable à remplir
 
 while($ligne4 = $RQTExecEquipes4->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes4 = $affichEquipes4.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes4 = $affichEquipes4.'<a href="detailsEquipe.php?id='.$ligne4['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne4['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -157,7 +157,7 @@ while($ligne4 = $RQTExecEquipes4->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch 
 											<div>Nombre de victoires : <div>'.$ligne4['victoire'].'</div></div><br/><br/>
 											<div>Nombre de défaites : <div>'.$ligne4['defaite'].'</div></div><br/><br/>
 										</div>
-									</div><br/>'; 
+									</div></a><br/>'; 
 }
 
 echo($affichEquipes4); //on affiche le résultat
@@ -167,7 +167,7 @@ $titre5 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Southwest<
 echo($titre5);
 
 //requête à exécuter
-$RQTEquipes5 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+$RQTEquipes5 = "SELECT eq.id_equipe, eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
 				FROM equipe AS eq
 				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
 				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
@@ -181,7 +181,7 @@ $affichEquipes5 = ''; //la variable à remplir
 
 while($ligne5 = $RQTExecEquipes5->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes5 = $affichEquipes5.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes5 = $affichEquipes5.'<a href="detailsEquipe.php?id='.$ligne5['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne5['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -194,7 +194,7 @@ while($ligne5 = $RQTExecEquipes5->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch 
 											<div>Nombre de victoires : <div>'.$ligne5['victoire'].'</div></div><br/><br/>
 											<div>Nombre de défaites : <div>'.$ligne5['defaite'].'</div></div><br/><br/>
 										</div>
-									</div><br/>'; 
+									</div></a><br/>'; 
 }
 
 echo($affichEquipes5); //on affiche le résultat
@@ -204,7 +204,7 @@ $titre6 = '<div class="titreEquipe"><div class="ligne"></div><div><h3>Northwest<
 echo($titre6);
 
 //requête à exécuter
-$RQTEquipes6 = "SELECT eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
+$RQTEquipes6 = "SELECT eq.id_equipe, eq.nom AS libelle, eq.surnom, eq.pays, eq.fondation, eq.manager, eq.entraineur, eq.image, divi.nom, comp.date_debut, comp.date_fin, resul.victoire, resul.defaite
 				FROM equipe AS eq
 				INNER JOIN division AS divi ON divi.id_division = eq.Division_id_division
 				INNER JOIN resultat AS resul ON resul.Equipe_id_equipe = eq.id_equipe
@@ -218,7 +218,7 @@ $affichEquipes6 = ''; //la variable à remplir
 
 while($ligne6 = $RQTExecEquipes6->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes6 = $affichEquipes6.'<div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes6 = $affichEquipes6.'<a href="detailsEquipe.php?id='.$ligne6['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne6['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -231,7 +231,7 @@ while($ligne6 = $RQTExecEquipes6->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch 
 											<div>Nombre de victoires : <div>'.$ligne6['victoire'].'</div></div><br/><br/>
 											<div>Nombre de défaites : <div>'.$ligne6['defaite'].'</div></div><br/><br/>
 										</div>
-									</div><br/>'; 
+									</div></a><br/>'; 
 }
 
 echo($affichEquipes6); //on affiche le résultat

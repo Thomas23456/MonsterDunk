@@ -113,7 +113,7 @@ INSERT INTO `Poste` (`id_poste`, `libelle`) VALUES
 (1,'Meneur'),
 (2,'Arrière'),
 (3,'Ailier'),
-(4,'Alier fort'),
+(4,'Ailier fort'),
 (5,'Pivot');
 
 
@@ -126,6 +126,7 @@ CREATE TABLE IF NOT EXISTS `Joueur` (
   `prenom` VARCHAR(32) NOT NULL,
   `Equipe_id_equipe` INT NOT NULL,
   `Poste_id_poste` INT NOT NULL,
+  `image_joueur` VARCHAR(32) NOT NULL,
   PRIMARY KEY (`id_joueur`),
   INDEX `fk_Joueur_Equipe1_idx` (`Equipe_id_equipe` ASC),
   INDEX `fk_Joueur_Poste1_idx` (`Poste_id_poste` ASC),
@@ -141,24 +142,24 @@ CREATE TABLE IF NOT EXISTS `Joueur` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `Joueur` (`id_joueur`, `nom`, `prenom`, `Equipe_id_equipe`, `Poste_id_poste`) VALUES
-(1,'Jaylen','Brown',2,2),
-(2,'Carsen','Edwards',2,1),
-(3,'Tacko','Fall',2,5),
-(4,'Javonte','Green',2,2),
-(5,'Gordon','Hayward',2,3),
-(6,'Enes','Kanter',2,5),
-(7,'Romeo','Langford',2,2),
-(8,'Semi','Ojeleye',2,3),
-(9,'Vincent','Poirier',2,5),
-(10,'Marcus','Smart',2,1),
-(11,'Jayson','Tatum',2,3),
-(12,'Daniel','Theis',2,4),
-(13,'Kemba','Walker',2,1),
-(14,'Bradley','Wanamaker',2,1),
-(15,'Tremont','Waters',2,1),
-(16,'Grant','Williams',2,3),
-(17,'Robert','Williams',2,4);
+INSERT INTO `Joueur` (`id_joueur`, `nom_joueur`, `prenom`, `Equipe_id_equipe`, `Poste_id_poste`, `image_joueur`) VALUES
+(1,'Jaylen','Brown',2,2,'brown.png'),
+(2,'Carsen','Edwards',2,1,'edwards.png'),
+(3,'Tacko','Fall',2,5,'fall.png'),
+(4,'Javonte','Green',2,2,'green.png'),
+(5,'Gordon','Hayward',2,3,'hayward.png'),
+(6,'Enes','Kanter',2,5,'kanter.png'),
+(7,'Romeo','Langford',2,2,'langford.png'),
+(8,'Semi','Ojeleye',2,3,'ojeleye.png'),
+(9,'Vincent','Poirier',2,5,'poirier.png'),
+(10,'Marcus','Smart',2,1,'smart.png'),
+(11,'Jayson','Tatum',2,3,'tatum.png'),
+(12,'Daniel','Theis',2,4,'theis.png'),
+(13,'Kemba','Walker',2,1,'walker.png'),
+(14,'Bradley','Wanamaker',2,1,'wanamaker.png'),
+(15,'Tremont','Waters',2,1,'waters.png'),
+(16,'Grant','Williams',2,3,'williams.png'),
+(17,'Robert','Williams',2,4,'williams2.png');
 
 
 -- -----------------------------------------------------
