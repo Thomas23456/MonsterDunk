@@ -223,6 +223,12 @@ h3{
 	color: black;
 	font-size: 1.1em;
 	padding: 0.5% 1% 0 0;
+	transition: all 1s ease;
+}
+
+.plus:hover{
+	transform: scale(1.2);
+	color: purple;
 }
 
 #conteneurAutreNews{
@@ -972,6 +978,17 @@ h3{
 	color: #002B5C;
 }
 
+.colorBorderEquipe31{
+	border-radius: 15px 5px 15px 0;
+	border-top: solid 3px grey;
+	border-bottom: solid 3px grey;
+	box-shadow: 2px 2px white;
+}
+
+.colorTitreEquipe31{
+	color: grey;
+}
+
 /* PAGE NEWS */
 
 .containerNewsPrincipal{
@@ -1028,6 +1045,10 @@ h3{
 	flex-flow: row nowrap;
 	align-items: center;
 	width: 30%;
+}
+
+.imageNews > img{
+	width: 100%;
 }
 
 .containerInfosNews{

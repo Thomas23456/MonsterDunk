@@ -79,7 +79,7 @@
                     echo'
                             <tr>
                                 <td>'.$line['classement'].'</td>
-                                <td class="equipeRank"><img src=../images/clubs/'.$line['image'].'><a href="detailsEquipe.php?idEquipe='.$line['id_equipe'].'">'.$line['nom'].'</a></td>
+                                <td class="equipeRank"><img src=../images/clubs/'.$line['image'].'><a href="detailsEquipe.php?id='.$line['id_equipe'].'&nb=31">'.$line['nom'].'</a></td>
                                 <td>'.$line['victoire'].'</td>
                                 <td>'.$line['defaite'].'</td>
                                 <td>'.$line['ratio'].'</td>
@@ -114,7 +114,7 @@
                     echo'
                             <tr>
                                 <td>'.$line['classement'].'</td>
-                                <td class="equipeRank"><img src=../images/clubs/'.$line['image'].'><a href="detailsEquipe.php?idEquipe='.$line['id_equipe'].'">'.$line['nom'].'</td>
+                                <td class="equipeRank"><img src=../images/clubs/'.$line['image'].'><a href="detailsEquipe.php?id='.$line['id_equipe'].'&nb=31">'.$line['nom'].'</td>
                                 <td>'.$line['victoire'].'</td>
                                 <td>'.$line['defaite'].'</td>
                                 <td>'.$line['ratio'].'</td>

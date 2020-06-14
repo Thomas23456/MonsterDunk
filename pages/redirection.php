@@ -15,7 +15,7 @@
     </head>
     <body>
         <?php
-            header('Refresh: 5; URL=../index.html');
+            header('Refresh: 5; URL=../index.php');
         ?>
 
         <div class='redirection'>
@@ -25,7 +25,7 @@
                     <span>Vous allez être redirigé vers l'accueil dans </span>
                     <span id="compteARebours"></span>
                 <div>
-                <a href="../index.html"><img src="../images/logo6.png" alt="Image logo Monster Dunk" class="logo effect"/></a>
+                <a href="../index.php"><img src="../images/logo6.png" alt="Image logo Monster Dunk" class="logo effect"/></a>
                 </div>
             </div>
         </div>

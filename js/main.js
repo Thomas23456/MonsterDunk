@@ -119,21 +119,21 @@ $('.equipeMenuCeltics').click(function(){
     }
 })
 
-$('.listingJoueurRaptors').click(function(){
-    if ($(".conteneurEquipeRaptors .deplierJeu")[0]){
-        $('.listingJoueurRaptors i').text('keyboard_arrow_down')
-        $('.listingJoueurRaptors i').removeClass('versHaut')
-        $( ".joueurListeRaptors" ).slideUp( "slow", function() {
-            $('.joueurListeRaptors').hide();
-            $('.equipeMenuRaptors').removeClass('deplierJeu')
+$('.listingJoueurCeltics').click(function(){
+    if ($(".conteneurEquipeCeltics.deplierJeu")[0]){
+        $('.listingJoueurCeltics i').text('keyboard_arrow_down')
+        $('.listingJoueurCeltics i').removeClass('versHaut')
+        $( ".joueurListeCeltics" ).slideUp( "slow", function() {
+            $('.joueurListeCeltics').hide();
+            $('.equipeMenuCeltics').removeClass('deplierJeu')
 
         });
     } else {
-        $('.listingJoueurRaptors i').text('keyboard_arrow_up')
-        $('.listingJoueurRaptors i').addClass('versHaut')
-        $( ".joueurListeRaptors" ).slideDown( "slow", function() {
-            $('.joueurListeRaptors').show();
-            $('.equipeMenuRaptors').addClass('deplierJeu')
+        $('.listingJoueurCeltics i').text('keyboard_arrow_up')
+        $('.listingJoueurCeltics i').addClass('versHaut')
+        $( ".joueurListeCeltics" ).slideDown( "slow", function() {
+            $('.joueurListeCeltics').show();
+            $('.equipeMenuCeltics').addClass('deplierJeu')
 
         });
     }

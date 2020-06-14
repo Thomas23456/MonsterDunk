@@ -99,7 +99,7 @@
 					</li>
 				</ul>
 				
-				<div class="containPlus"><a href="" class="plus">Voir plus  &#10132;</a></div>
+				<div class="containPlus"><a href="pages/news.php" class="plus">Voir plus  &#10132;</a></div>
 				
 			</section><br/>
 		</div>
