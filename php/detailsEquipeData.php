@@ -107,7 +107,7 @@ echo($titreComposition);
 $RQTCompo1 = "SELECT * 
 			FROM joueur AS jou
 			INNER JOIN poste AS pos ON pos.id_poste = jou.Poste_id_poste
-			WHERE pos.libelle = 'Meneur'";
+			WHERE pos.libelle = 'Meneur' AND jou.Equipe_id_equipe = $idEquipe";
 
 $RQTExecCompo1 = $cnx->prepare($RQTCompo1);
 $RQTExecCompo1->execute();
@@ -121,7 +121,7 @@ while($line1 = $RQTExecCompo1->fetch(PDO::FETCH_ASSOC)){
 $RQTCompo2 = "SELECT * 
 			FROM joueur AS jou
 			INNER JOIN poste AS pos ON pos.id_poste = jou.Poste_id_poste
-			WHERE pos.libelle = 'Arrière'";
+			WHERE pos.libelle = 'Arrière' AND jou.Equipe_id_equipe = $idEquipe";
 
 $RQTExecCompo2 = $cnx->prepare($RQTCompo2);
 $RQTExecCompo2->execute();
@@ -135,7 +135,7 @@ while($line2 = $RQTExecCompo2->fetch(PDO::FETCH_ASSOC)){
 $RQTCompo3 = "SELECT * 
 			FROM joueur AS jou
 			INNER JOIN poste AS pos ON pos.id_poste = jou.Poste_id_poste
-			WHERE pos.libelle = 'Pivot'";
+			WHERE pos.libelle = 'Pivot' AND jou.Equipe_id_equipe = $idEquipe";
 
 $RQTExecCompo3 = $cnx->prepare($RQTCompo3);
 $RQTExecCompo3->execute();
@@ -149,7 +149,7 @@ while($line3 = $RQTExecCompo3->fetch(PDO::FETCH_ASSOC)){
 $RQTCompo4 = "SELECT * 
 			FROM joueur AS jou
 			INNER JOIN poste AS pos ON pos.id_poste = jou.Poste_id_poste
-			WHERE pos.libelle = 'Ailier'";
+			WHERE pos.libelle = 'Ailier' AND jou.Equipe_id_equipe = $idEquipe";
 
 $RQTExecCompo4 = $cnx->prepare($RQTCompo4);
 $RQTExecCompo4->execute();
@@ -163,7 +163,7 @@ while($line4 = $RQTExecCompo4->fetch(PDO::FETCH_ASSOC)){
 $RQTCompo5 = "SELECT * 
 			FROM joueur AS jou
 			INNER JOIN poste AS pos ON pos.id_poste = jou.Poste_id_poste
-			WHERE pos.libelle = 'Ailier fort'";
+			WHERE pos.libelle = 'Ailier fort' AND jou.Equipe_id_equipe = $idEquipe";
 
 $RQTExecCompo5= $cnx->prepare($RQTCompo5);
 $RQTExecCompo5->execute();

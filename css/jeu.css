@@ -1,5 +1,9 @@
 /** JEU **/
-body, ul, li{
+html{
+	background: white;
+}
+
+body{
     margin:0;
     padding: 0;
 }
@@ -69,6 +73,7 @@ body, ul, li{
 .conteneurListeEquipe ul{
     border-bottom-left-radius: 10px 10px;
     border-bottom-right-radius: 10px 10px;
+	margin: 0;
     padding: 1rem;
 }
 

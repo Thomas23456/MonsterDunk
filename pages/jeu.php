@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jeu</title>
         <link rel="stylesheet" href="../css/jeu.css">
+		<link rel="stylesheet" type="text/css" href="../css/commun.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,6 +16,24 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="../js/main.js"></script>
     </head>
+	
+	<div class="conteneurLogo">
+		<a href="../index.php"><img src="../images/logo6.png" alt="Image logo Monster Dunk" class="logo effect"/></a>
+	</div>
+	<div class="conteneurReseaux">
+		<a href="#" class="logos"><img src="../images/facebook.png" alt="Image logo facebook" class="reseaux effect"/></a>
+		<a href="#" class="logos"><img src="../images/instagram.png" alt="Image logo instagram" class="reseaux effect"/></a>
+		<a href="#" class="logos"><img src="../images/twitter.png" alt="Image logo twitter" class="reseaux effect"/></a>
+		<a href="#" class="logos"><img src="../images/youtube.png" alt="Image logo youtube" class="reseaux effect"/></a>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="../pages/news.php" class="textMenu">News</a></li><!--
+			--><li><a href="../pages/equipes.php" class="textMenu">Equipes</a></li><!--
+			--><li><a href="../pages/match.php" class="textMenu">Matchs</a></li><!--
+			--><li><a href="../pages/resultat.php" class="textMenu bord">Résultats</a></li>
+		</ul>
+	</nav>
 
     <body>
         <div id="conteneurJeu">
@@ -29,7 +50,7 @@
                     <div class="conteneurEquipe conteneurEquipeCeltics">
                         <div class="enteteEquipe enteteEquipeCeltics">  
                             <div class="nomEquipe equipeMenuCeltics">
-                                <span class="libelleEquipe">Boston Celctics</span>
+                                <span class="libelleEquipe">Boston Celtics</span>
                                 <span class="listingJoueur listingJoueurCeltics">Liste des joueurs<i class="material-icons">keyboard_arrow_down</i></span>
                             </div>
                             <a href="jeu.php?equipe=Boston Celtics" class="boutonAjoutEquipe"><i class='far fa-arrow-alt-circle-right'></i></a>
@@ -141,6 +162,34 @@
                 </div>
             </div>
         </div>
+		
+		<?php
+	
+		require("../php/popup.php");
+		
+		?>
+
+		<footer>
+			<table>
+				<tr>
+					<td class="legendFooter"><div id="borderLeftFooter"><a href="#popup">A propos</a></div><div><a href="#popup2">Conditions d'utilisation</a></div><div><a href="#popup3">Contact</a></div></td>
+				</tr>
+				<tr>
+					<td><a href=""><img src="../images/monsterDunkLogo5.png" alt="Image logo Monster Dunk" class="logo effect"/></a></td>
+				</tr>
+				<tr>
+					<td><div class="droits">@Copyright 2020 Monster Dunk. Tous droits réservés.</div></td>
+				</tr>
+				<tr>
+					<td>
+						<a href=""><img src="../images/facebook.png" alt="Image logo facebook" class="reseaux effect"/></a>
+						<a href=""><img src="../images/instagram.png" alt="Image logo instagram" class="reseaux effect"/></a>
+						<a href=""><img src="../images/twitter.png" alt="Image logo twitter" class="reseaux effect"/></a>
+						<a href=""><img src="../images/youtube.png" alt="Image logo youtube" class="reseaux effect"/></a>
+					</td>
+				</tr>
+			</table>
+		</footer>
         <script src="../js/main.js"></script>
     </body>
 </html>

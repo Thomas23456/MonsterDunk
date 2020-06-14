@@ -70,7 +70,7 @@ $affichEquipes2 = ''; //la variable à remplir
 
 while($ligne2 = $RQTExecEquipes2->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes2 = $affichEquipes2.'<a href="detailsEquipe.php?id='.$ligne2['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes2 = $affichEquipes2.'<a href="detailsEquipe.php?id='.$ligne2['id_equipe'].'&nb='.$cpt.'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne2['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -107,7 +107,7 @@ $affichEquipes3 = ''; //la variable à remplir
 
 while($ligne3 = $RQTExecEquipes3->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes3 = $affichEquipes3.'<a href="detailsEquipe.php?id='.$ligne3['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes3 = $affichEquipes3.'<a href="detailsEquipe.php?id='.$ligne3['id_equipe'].'&nb='.$cpt.'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne3['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -144,7 +144,7 @@ $affichEquipes4 = ''; //la variable à remplir
 
 while($ligne4 = $RQTExecEquipes4->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes4 = $affichEquipes4.'<a href="detailsEquipe.php?id='.$ligne4['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes4 = $affichEquipes4.'<a href="detailsEquipe.php?id='.$ligne4['id_equipe'].'&nb='.$cpt.'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne4['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -181,7 +181,7 @@ $affichEquipes5 = ''; //la variable à remplir
 
 while($ligne5 = $RQTExecEquipes5->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes5 = $affichEquipes5.'<a href="detailsEquipe.php?id='.$ligne5['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes5 = $affichEquipes5.'<a href="detailsEquipe.php?id='.$ligne5['id_equipe'].'&nb='.$cpt.'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne5['image'].'" alt="Logo équipe celtics"/>
 										</div>
@@ -218,7 +218,7 @@ $affichEquipes6 = ''; //la variable à remplir
 
 while($ligne6 = $RQTExecEquipes6->fetch(PDO::FETCH_ASSOC)){ //boucle pour fetch le résultat de la requête
 	$cpt++;
-	$affichEquipes6 = $affichEquipes6.'<a href="detailsEquipe.php?id='.$ligne6['id_equipe'].'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
+	$affichEquipes6 = $affichEquipes6.'<a href="detailsEquipe.php?id='.$ligne6['id_equipe'].'&nb='.$cpt.'"><div class="containerEquipe colorBorderEquipe'.$cpt.'">
 										<div class="imageEquipe">
 											<img src="../images/clubs/'.$ligne6['image'].'" alt="Logo équipe celtics"/>
 										</div>

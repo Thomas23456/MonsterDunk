@@ -16,10 +16,10 @@
 			<a href="#"><img src="images/logo6.png" alt="Image logo Monster Dunk" class="logo effect"/></a>
 		</div>
 		<div class="conteneurReseaux">
-			<a href="" class="logos"><img src="images/facebook.png" alt="Image logo facebook" class="reseaux effect"/></a>
-			<a href="" class="logos"><img src="images/instagram.png" alt="Image logo instagram" class="reseaux effect"/></a>
-			<a href="" class="logos"><img src="images/twitter.png" alt="Image logo twitter" class="reseaux effect"/></a>
-			<a href="" class="logos"><img src="images/youtube.png" alt="Image logo youtube" class="reseaux effect"/></a>
+			<a href="#" class="logos"><img src="images/facebook.png" alt="Image logo facebook" class="reseaux effect"/></a>
+			<a href="#" class="logos"><img src="images/instagram.png" alt="Image logo instagram" class="reseaux effect"/></a>
+			<a href="#" class="logos"><img src="images/twitter.png" alt="Image logo twitter" class="reseaux effect"/></a>
+			<a href="#" class="logos"><img src="images/youtube.png" alt="Image logo youtube" class="reseaux effect"/></a>
 		</div>
 		<nav>
 			<ul>
@@ -29,6 +29,7 @@
 				--><li><a href="pages/resultat.php" class="textMenu bord">Résultats</a></li>
 			</ul>
 		</nav>
+		
 		<div class="containerGrid">
 			<div class="grid">
 				<div class="one">
@@ -189,11 +190,17 @@
 	</div>
 
 	<br/><br/><br/>
+	
+	<?php
+	
+	require("php/popup.php");
+	
+	?>
 
 	<footer>
 		<table>
 			<tr>
-				<td class="legendFooter"><div id="borderLeftFooter"><a href="">A propos</a></div><div><a href="">Conditions d'utilisation</a></div><div><a href="">Contact</a></div></td>
+				<td class="legendFooter"><div id="borderLeftFooter"><a href="#popup">A propos</a></div><div><a href="#popup2">Conditions d'utilisation</a></div><div><a href="#popup3">Contact</a></div></td>
 			</tr>
 			<tr>
 				<td><a href=""><img src="images/monsterDunkLogo5.png" alt="Image logo Monster Dunk" class="logo effect"/></a></td>
