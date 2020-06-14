@@ -105,22 +105,8 @@ $(document).ready(function(){
     $('.joueurListe').hide();
 })
 
-$('.equipeMenuCeltics').click(function(){
-    if ($(".conteneurEquipeCeltics .deplierJeu")[0]){
-        $( ".joueurListeCeltics" ).slideUp( "slow", function() {
-            $('.joueurListeCeltics').hide();
-            $('.equipeMenuCeltics').removeClass('deplierJeu')
-        });
-    } else {
-        $( ".joueurListeCeltics" ).slideDown( "slow", function() {
-            $('.joueurListeCeltics').show();
-            $('.equipeMenuCeltics').addClass('deplierJeu')
-        });
-    }
-})
-
 $('.listingJoueurCeltics').click(function(){
-    if ($(".conteneurEquipeCeltics.deplierJeu")[0]){
+    if ($(".conteneurEquipeCeltics .deplierJeu")[0]){
         $('.listingJoueurCeltics i').text('keyboard_arrow_down')
         $('.listingJoueurCeltics i').removeClass('versHaut')
         $( ".joueurListeCeltics" ).slideUp( "slow", function() {
@@ -134,7 +120,6 @@ $('.listingJoueurCeltics').click(function(){
         $( ".joueurListeCeltics" ).slideDown( "slow", function() {
             $('.joueurListeCeltics').show();
             $('.equipeMenuCeltics').addClass('deplierJeu')
-
         });
     }
 })
