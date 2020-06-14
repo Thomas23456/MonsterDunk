@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS `Article` (
   `id_article` INT NOT NULL,
   `type_article` VARCHAR(32) NOT NULL,
-  `titre` VARCHAR(32) NOT NULL,
+  `titre` VARCHAR(200) NOT NULL,
   `auteur` VARCHAR(32) NOT NULL,
   `date_ajout_article` DATE NOT NULL,
   `description` VARCHAR(500) NOT NULL,
@@ -12,8 +12,9 @@ ENGINE = InnoDB;
 
 INSERT INTO `Article` (`id_article`,`type_article`,`titre`,`auteur`,`date_ajout_article`,`description`,`lien_img`) VALUES
 (1,'News','LeBron James vs Stephen Curry : une bataille sans merci','BFM','2020-06-09','De 2015 à 2018, LeBron James avec les Cavs et Stephen Curry avec les Warriors se sont affrontés durant 4 finales consécutives. Même si le bilan est à l\'avantage du dernier avec 3 victoires contre une, le meneur reconnaît qu\'affronter le King a joué un grand rôle dans son évolution en tant que joueur et personne.','article3.jpeg'),
-(2,'News','Pourquoi LeBron a refusé de participer à la grande réunion des joueurs','Cnews','2020-06-06','Draymond Green et les réseaux sociaux décidément… Un utilisateur Twitter a scruté le profil de l’intérieur des Warriors et a constaté un « like » bien gênant sur un tweet contre Ayesha Curry… Erreur ou non, toujours est-il que ça fait tâche.','article6.jpg'),
-(4,'News','Luka Doncic réagit avec humour à la polémique le concernant','L\'Equipe','2020-06-003','Luka Doncic est-il hors de forme ? C’est la grande question à Dallas ces derniers jours. Si l’entraineur personnel du joueur a corrigé ses propos, le Slovène est enfin revenu sur cette fausse polémique.','article2.jpg'),
+(2,'News','Pourquoi LeBron a refusé de participer à la grande réunion des joueurs','Cnews','2020-06-06','Alors qu’une grande partie des joueurs NBA s’est retrouvée vendredi soir dans une conférence téléphonique au sujet de la reprise de la ligue, LeBron James ne faisait pas partie des participants','article1.jpg'),
+(3,'Article','La grosse boulette de Draymond envers la femme de Steph Curry','Quotidien','2020-06-04','Draymond Green et les réseaux sociaux décidément… Un utilisateur Twitter a scruté le profil de l’intérieur des Warriors et a constaté un « like » bien gênant sur un tweet contre Ayesha Curry… Erreur ou non, toujours est-il que ça fait tâche.','article6.jpg'),
+(4,'News','Luka Doncic réagit avec humour à la polémique le concernant','L\'Equipe','2020-06-03','Luka Doncic est-il hors de forme ? C’est la grande question à Dallas ces derniers jours. Si l’entraineur personnel du joueur a corrigé ses propos, le Slovène est enfin revenu sur cette fausse polémique.','article2.jpg'),
 (5,'Article','Patrick Ewing positif au coronavirus','Quotidien','2020-05-29','L’ancienne gloire des New York Knicks, membre de la première Dream Team en 1992, a annoncé avoir été testée positive au Coronavirus','article7.jpg'),
 (6,'News','Quatre Français sont en vacances, mais pour quelle raison ?','BFM','2020-05-25','La NBA a annoncé qu\'elle reprendrait sa saison le 31 juillet avec 22 franchises, ce qui signifie que 8 ne seront pas conviées à Orlando. Quatre joueurs français sont donc officiellement en vacances.','article8.jpg'),
 (7,'News','NBA : les gagnants et perdants de la reprise de la saison','Cnews','2020-05-23','Stephen Curry et Klay Thompson ne rejoueront pas avant décembre 2020. Le plan de reprise de la NBA s\'avère favorable aux Golden State Warriors, derniers à l\'Ouest.','article10.jpg'),
@@ -122,7 +123,7 @@ INSERT INTO `Poste` (`id_poste`, `libelle`) VALUES
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Joueur` (
   `id_joueur` INT NOT NULL,
-  `nom` VARCHAR(32) NOT NULL,
+  `nom_joueur` VARCHAR(32) NOT NULL,
   `prenom` VARCHAR(32) NOT NULL,
   `Equipe_id_equipe` INT NOT NULL,
   `Poste_id_poste` INT NOT NULL,
